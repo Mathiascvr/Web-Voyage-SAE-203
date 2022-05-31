@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Wireframe - Parties Communes</title>
+</head>
+<body>
+    <header>
+        <div class="bandeau flex">
+            <div class="flex">
+                <img src="/image/logo.jpg" alt="logo">
+                <h1>Toutes nos Destination</h1>
+            </div>
+            <div class="navbutton flex">
+                <img src="/image/loupe.png" alt="loupe" class="tailleimg">
+                <form action="" method="post">
+                    <button type="submit">Se Connecter</button>
+                </form>
+                <a href="vers le tel"><img src="/image/phone.png" alt="tel" class="tailleimg"></a>
+                <a href="affiche le menu burger"><img src="/image/menu.png" alt="burger" class="tailleimg"></a>
+            </div>    
+        </div>
+        <div class="bodyslider">
+            <div class="slider">
+                <div class="slides">
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                    <input type="radio" name="radio-btn" id="radio4">
+                    <input type="radio" name="radio-btn" id="radio5">
+                    
+                    <div class="slide first">
+                        <img src="/image/paris.jpg" alt="Paris">
+                    </div>
+                    <div class="slide">
+                        <img src="/image/londres.jpg" alt="Londres">
+                    </div>
+                    <div class="slide">
+                        <img src="/image/rome.jpg" alt="Rome">
+                    </div>
+                    <div class="slide">
+                        <img src="/image/barcelonne.jpg" alt="Barcelone">
+                    </div>
+                    <div class="slide">
+                        <img src="/image/berlin.jpg" alt="Berlin">
+                    </div>
+
+                    <div class="nav-auto">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                        <div class="auto-btn4"></div>
+                        <div class="auto-btn5"></div>
+                    </div>
+                </div>
+                <div class="nav-manuel">
+                    <label for="radio1" class="manuel-btn"></label>
+                    <label for="radio2" class="manuel-btn"></label>
+                    <label for="radio3" class="manuel-btn"></label>
+                    <label for="radio4" class="manuel-btn"></label>
+                    <label for="radio5" class="manuel-btn"></label>
+                </div>
+            </div>
+            <script type="text/javascript">
+                var counter = 1;
+                setInterval(function(){
+                    document.getElementById('radio' + counter).checked = true;
+                    counter++;
+                    if(counter > 5){
+                        counter = 1;
+                    }
+                }, 5000);
+            </script>
+        </div>
+    </header>
+    <main>
+        <div class="partI flex">
+            <div class="container">
+                <div class="switch flex">
+                    <div class="VH activeonglet" onclick="tabl1();">Vol + Hôtel</div>
+                    <div class="V" onclick="tabl2();">Vol</div>
+                    <div class="H" onclick="tabl3();">Hôtel</div>
+                    <div class="S" onclick="tabl4();">Séjour</div>
+                </div>
+                
+                <div class="outer">
+                    <div class="flex" id="form">
+                        <!-- AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA -->
+                        <form class="activeform" id="page vh">
+                            <div>
+                                Départ <br>
+                                <input type="text" name="depart" id="" placeholder="⚐ Ville ou Aéroport">
+                            </div>
+                            <div>
+                                Nombre de client <br>
+                                <select name="reservationhotel" id="">
+                                    <option value="">2 adultes, 2 enfants, 1 chambre</option>
+                                    <option value="">2 adultes, 2 enfants, 2 chambres</option>
+                                    <option value="">2 adultes, 1 chambre</option>
+                                    <option value="">2 adultes, 3 enfants, 1 chambre</option>
+                                    <option value="">2 adultes, 3 enfants, 2 chambre</option>
+                                </select>
+                            </div>
+                            <div>
+                                Destination <br>
+                                <input type="text" name="destination" placeholder="🗺 Où voulez-vous aller ?">
+                            </div>
+                            <div>
+                                Votre place dans l'avion <br>
+                                <select name="place">
+                                    <option value="">💺 N'importe quelle classe</option>
+                                    <option value="">💺 Première classe</option>
+                                    <option value="">💺 Buisness classe</option>
+                                    <option value="">💺 Classe Economique</option>
+                                </select>
+                            </div>
+                            <div class="flex">
+                                <div>
+                                    Date de Départ <br>
+                                    <input type="date" name="depart" id="">
+                                </div>
+                                <div>
+                                    Date de Retour <br>
+                                    <input type="date" name="retour" id="">
+                                </div>
+                            </div>
+                            <div>
+                                <button>Plus de critères</button>
+                            </div>
+                            <div>
+                                <button type="submit" id="btn">Rechercher</button>
+                            </div>
+                        </form>
+                        
+                        <!-- AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA -->
+                        <form id="page v">
+                            <div>
+                                Départ <br>
+                                <input type="text" name="depart" id="" placeholder="⚐ Ville ou Aéroport">
+                            </div>
+                            <div>
+                                Arrivée <br>
+                                <input type="text" name="arrivée" id="" placeholder="⚐ Ville ou Aéroport">
+                            </div>
+                            <div>
+                                Votre place dans l'avion <br>
+                                <select name="place">
+                                    <option value="">💺 N'importe quelle classe</option>
+                                    <option value="">💺 Première classe</option>
+                                    <option value="">💺 Buisness classe</option>
+                                    <option value="">💺 Classe Economique</option>
+                                </select>
+                            </div>
+                            <div class="flex">
+                                <div>
+                                    Date de Départ <br>
+                                    <input type="date" name="depart" id="">
+                                </div>
+                                <div>
+                                    Date de Retour <br>
+                                    <input type="date" name="retour" id="">
+                                </div>
+                            </div>
+                            <div>
+                                <button type="submit" id="btn">Rechercher</button>
+                            </div>
+                        </form>
+    
+                        <!-- AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA -->
+                        <form id="page h">
+                            <div>
+                                Lieu <br>
+                                <input type="text" name="arrivée" id="" placeholder="⚐ Ville">
+                            </div>
+                            <div>
+                                Nombre de client <br>
+                                <select name="reservationhotel" id="">
+                                    <option value="">2 adultes, 2 enfants, 1 chambre</option>
+                                    <option value="">2 adultes, 2 enfants, 2 chambres</option>
+                                    <option value="">2 adultes, 1 chambre</option>
+                                    <option value="">2 adultes, 3 enfants, 1 chambre</option>
+                                    <option value="">2 adultes, 3 enfants, 2 chambre</option>
+                                </select>
+                            </div>
+                            <div class="flex">
+                                <div>
+                                    Date d'arrivée' <br>
+                                    <input type="date" name="depart" id="">
+                                </div>
+                                <div>
+                                    Date de Départ <br>
+                                    <input type="date" name="retour" id="">
+                                </div>
+                            </div>
+                            <div>
+                                <button>Plus de critères</button>
+                            </div>
+                            <div>
+                                <button type="submit" id="btn">Rechercher</button>
+                            </div>
+                        </form>
+    
+                        <!-- AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA -->
+                        <form id="page s">
+                            <div class="flex">
+                                <div>
+                                    Date de Départ <br>
+                                    <input type="date" name="depart" id="">
+                                </div>
+                                <div>
+                                    Date de Retour <br>
+                                    <input type="date" name="retour" id="">
+                                </div>
+                            </div>
+                            <div>
+                                <button type="submit" id="btn">Rechercher</button>
+                            </div>
+                        </form>
+                    </div>
+                    <script type="text/javascript">
+                        const VH = document.querySelector(".VH");
+                        const V = document.querySelector(".V");
+                        const H = document.querySelector(".H");
+                        const S = document.querySelector(".S");
+                        const form = document.querySelector("#form");
+                        const switchs = document.querySelector(".switch");
+    
+                        function tabl1(){
+                            form.style.marginLeft = "0%";
+                            V.classList.remove('activeonglet');
+                            VH.classList.add('activeonglet');
+                            H.classList.remove('activeonglet');
+                            S.classList.remove('activeonglet');
+                        }
+    
+                        function tabl2() {
+                            form.style.marginLeft = "-100%";
+                            form.classList.add('activeform');
+                            V.classList.add('activeonglet');
+                            VH.classList.remove('activeonglet');
+                            H.classList.remove('activeonglet');
+                            S.classList.remove('activeonglet');
+                        }
+    
+                        function tabl3(){
+                            form.style.marginLeft = "-200%";
+                            V.classList.remove('activeonglet');
+                            VH.classList.remove('activeonglet');
+                            H.classList.add('activeonglet');
+                            S.classList.remove('activeonglet');
+                        }
+    
+                        function tabl4(){
+                            form.style.marginLeft = "-300%";
+                            V.classList.remove('activeonglet');
+                            VH.classList.remove('activeonglet');
+                            H.classList.remove('activeonglet');
+                            S.classList.add('activeonglet');
+                        }
+                    </script>
+                </div>
+            </div>
+            <div class="cotedroit"></div>
+        </div>
+        <div class="qui flex">
+            <div>
+                <h1>| Qui somme-nous</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, suscipit laboriosam mollitia molestias nobis quibusdam ipsa saepe odit ipsum, vero, hic sed quasi unde quos atque itaque? Consequatur, provident odio!</p>
+            </div>
+            <div>
+                <img src="/image/1.jpg" alt="">
+                <img src="/image/2.jpg" alt="">
+            </div>
+            <img src="/image/3.jpg" alt="">
+        </div>
+    </main>
+    <footer>
+        <div class="flex">
+            <div class="footgauche ">
+                <div class="ligneI flex">
+                    <img src="/image/logo.jpg" alt="logo">
+                    <article>
+                        <h2>Bordeaux</h2>
+                        <p>26 cours du Cahpeau-Rouge</p>
+                        <p>33000 Bordeaux</p>
+                        <p class="tel">05 35 54 31 40</p>
+                    </article>
+                    <article>
+                        <h2>Lille</h2>
+                        <p>76 rue Nationale</p>
+                        <p>59800 Lille</p>
+                        <p class="tel">03 28 04 68 20</p>
+                    </article>
+                    <article>
+                        <h2>Lyon</h2>
+                        <p>10 quai Tisitt</p>
+                        <p>69002 Lyon</p>
+                        <p class="tel">04 72 44 13 40</p>
+                    </article>
+                </div>
+                <div class="ligneII flex">
+                    <article>
+                        <h2>Marseille</h2>
+                        <p>12 rue Breteuil</p>
+                        <p>13001 Marseille</p>
+                        <p class="tel">04 84 25 21 80</p>
+                    </article>
+                    <article>
+                        <h2>Nice</h2>
+                        <p>62 reu Giottredo</p>
+                        <p>06000 Nice</p>
+                        <p class="tel">04 97 03 64 80</p>
+                    </article>
+                    <article>
+                        <h2>Paris</h2>
+                        <p>2 au 18 rue Saint-Victor</p>
+                        <p>75005 Paris</p>
+                        <p class="tel">01 53 10 30 15</p>
+                    </article>
+                    <article>
+                        <h2>Toulouse</h2>
+                        <p>43 rue Peyrolières</p>
+                        <p>31000 Toulouse</p>
+                        <p class="tel">05 62 30 15 00</p>
+                    </article>
+                </div>
+            </div>
+            <div class="footdroit flex">
+               <div class="imagecercle">
+                   <div class="imagecercle"><img src="/image/facebook.png" alt="" class="reseau"></div>
+               </div>
+               <div class="imagecercle">
+                   <div class="imagecercle"><img src="/image/instagram.png" alt="" class="reseau"></div>
+               </div>
+               <div class="imagecercle">
+                   <div class="imagecercle"><img src="/image/twitter.png" alt="" class="reseau"></div>
+               </div>
+               <div class="imagecercle">
+                   <div class="imagecercle"><img src="/image/youtube.png" alt="" class="reseau"></div>
+               </div>
+            </div>
+        </div>
+        <ul class="flex">
+            <li class="premieremention"><a href="">Espace Client</a></li>
+            <li><a href="">Nous Rejoindre</a></li>
+            <li><a href="">Mention Légales</a></li>
+            <li><a href="">Politique de confidentialité</a></li>
+            <li><a href="">Gestion des cookies</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

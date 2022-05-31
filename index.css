@@ -1,0 +1,302 @@
+/* GENERAL */
+
+.flex{
+    display: flex;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+li:first-child{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* FIN GENERAL */
+
+/* BODY */
+body{
+    margin: 0 10px;
+}
+/* FIN BODY */
+
+/* HEADER */
+.bandeau{
+    justify-content: space-between;
+}
+
+.bandeau>div:first-child>img{
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.bandeau>div{
+    align-items: center;
+}
+
+.navbutton, .bandeau{
+    align-items: center;
+}
+
+.tailleimg{
+    max-width: 50px;
+    height: 50px;
+}
+
+/* SLIDER */
+
+.bodyslider{
+    margin: 0%;
+    padding: 0;
+    height: 58vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider{
+    width: 800px;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.slides{
+    width: 500%;
+    height: 500px;
+    display: flex;
+}
+
+.slides input{
+    display: none;
+}
+
+.slide{
+    width: 20%;
+    transition: 2s;
+}
+
+.slide img{
+    width: 800px;
+    height: 500px;
+}
+
+.nav-manuel{
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manuel-btn{
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manuel-btn:not(:last-child){
+    margin-right: 40px;
+}
+
+.manuel-btn:hover{
+    background: black;
+}
+
+#radio1:checked~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked~ .first{
+    margin-left: -20%;
+}
+
+#radio3:checked~ .first{
+    margin-left: -40%;
+}
+#radio4:checked~ .first{
+    margin-left: -60%;
+}
+#radio5:checked~ .first{
+    margin-left: -80%;
+}
+
+.navigation-auto{
+    position: absolute;
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    margin-top: 460px;
+}
+
+.navigation-auto div{
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background: black;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background: black;
+}
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background: black;
+}
+#radio4:checked ~ .navigation-auto .auto-btn4{
+    background: black;
+}
+#radio5:checked ~ .navigation-auto .auto-btn5{
+    background: black;
+}
+
+
+/* FIN SLIDER */
+
+/*  FIN HEADER */
+
+
+/* MAIN */
+
+/* PARTI 1 */
+
+/* MENU */
+
+.container{
+    width: 20%;
+    position: relative;
+    align-items: center;
+    border-left: 1px solid midnightblue;
+}
+
+.switch{
+    justify-content: space-between;
+    height: 10%;
+    border-top: 1px solid midnightblue;
+}
+
+.switch>div{
+    width: 25%;
+    height: 100%;
+    text-align: center;
+    padding: 8px 0;
+    cursor: pointer;
+    border-right: 1px solid midnightblue;
+}
+
+.container{
+    height: 340px;
+}
+
+.container>.outer{
+    overflow: hidden;
+}
+
+#form{
+    width: 400%;
+    position: relative;
+    
+}
+
+#form>form{
+    width: 25%;
+    padding: 15px;
+}
+
+.activeonglet{
+    background: orange;
+    color: white;
+}
+
+.activeform{
+    background: midnightblue;
+    height: 305px;
+    color: white;
+}
+
+/* FIN MENU */
+
+
+
+.cotedroit{
+    background-color: aqua;
+    width: 80%;
+    height: auto;
+}
+
+/* FIN PARTI 1 */
+
+/* QUI */
+.qui{
+    margin: 10px 0 10px 20%;
+    align-items: center;
+}
+.qui img{
+    width: 211px;
+    height: auto;
+    margin-left: 10px;
+}
+
+/* FIN QUI */
+
+/* FIN MAIN */
+
+
+/* FOOTER */
+
+footer{
+    margin: 10px 0 30px 20%;
+}
+
+footer>div{
+    align-items: center;
+}
+
+.footgauche{
+    width: 80%;
+}
+.ligneI>img{
+    width: 100%;
+    height: auto;
+}
+.ligneI img,article{
+    width: 25%;
+}
+
+.imagecercle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footdroit>div>div{
+    height: 100px;
+    width: 100px;
+    border: solid;
+    border-radius: 100px;
+}
+
+.reseau{
+    width: 80px;
+    height: 80px;
+}
+
+footer>ul{
+    justify-content: space-evenly;
+}
+/* FIN FOOTER */
